@@ -1,0 +1,21 @@
+@import './Header/header.scss';
+@import './Readme/readme.scss';
+@import './Links/links.scss';
+@import './Skills/chart.scss';
+@import './Row/row.scss';
+@import './ProgressSkill/progress-skills.scss';
+@import './Skills/skills.scss';
+@import './Career/career.scss';
+@import './Education/education.scss';
+@import './Skeleton/skeleton.scss';
+
+@import "../palette.scss";
+
+@mixin title_definition {
+  font-family: "ComputerFont", sans-serif;
+  h1 {
+    margin: 0px;
+    font-size: 10vw;
+    color: $title-color;
+  }
+}

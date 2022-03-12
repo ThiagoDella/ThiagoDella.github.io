@@ -1,0 +1,45 @@
+.skeleton {
+  &__row--first,
+  &__row--second,
+  &__row--third,
+  &__row--fourth {
+    background: #eee;
+    color: #eee;
+    height: 10px;
+    margin: 10px 0px;
+    width: 100%;
+    border-radius: 25px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      border-radius: 25px;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        transparent,
+        rgba(255, 255, 255, 0.5)
+      );
+      width: 50%;
+      height: 10px;
+      animation: loading 1.2s infinite;
+    }
+  }
+  &__row--second,
+  &__row--fourth {
+    width: 95%;
+  }
+
+  &__row--third {
+    width: 100%;
+  }
+}
+
+@keyframes loading {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}

@@ -1,0 +1,13 @@
+@import './components/components.scss';
+
+.App {
+  height: 100%;
+}
+
+.career-education {
+  display: flex;
+  padding: 10px;
+  overflow: hidden;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}

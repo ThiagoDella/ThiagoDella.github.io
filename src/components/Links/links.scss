@@ -1,0 +1,44 @@
+@include media(">=tablet") {
+  .links--small-screen {
+    display: none;
+  }
+  .links--big-screen {
+    position: relative;
+    .links {
+      height: 28px;
+      width: max-content;
+      position: absolute;
+      right: 6px;
+      top: -4vw;
+      transform: rotate(-3deg);
+
+      svg {
+        color: $title-color;
+        height: 2vw;
+        min-height: 25px;
+        margin-right: 12px;
+      }
+    }
+  }
+}
+
+@include media("<tablet") {
+  .links--big-screen {
+    display: none;
+  }
+  .links--small-screen {
+    position: relative;
+    .links {
+      position: absolute;
+      margin: 24px 0px;
+      left: 50%;
+      transform: translateX(-50%);
+      svg {
+        color: $title-color;
+        height: 2vw;
+        min-height: 25px;
+        margin-right: 12px;
+      }
+    }
+  }
+}
