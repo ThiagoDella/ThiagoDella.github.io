@@ -1,0 +1,64 @@
+@import "../../palette.scss";
+@import '../../include-media.scss';
+
+@mixin title_definition {
+  font-family: "ComputerFont", sans-serif;
+  h1 {
+    margin: 0px;
+    font-size: 10vw;
+    color: $title-color;
+  }
+}
+
+@keyframes fadein {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.header {
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw), 0 99%);
+
+  &__image {
+    width: 100%;
+  }
+
+  .names {
+    position: absolute;
+    top: 35%;
+    left: 55%;
+    line-height: 8.2vw;
+
+    &__firstname {
+      @include title_definition;
+      margin-left: -20%;
+    }
+
+    &__lastname {
+      @include title_definition;
+    }
+
+    @include media(">=tablet") {
+      &__subtitle {
+        line-height: normal;
+        position: absolute;
+        width: 100%;
+        text-align: right;
+        font-size: 1.3vw;
+        color: $title-color;
+        animation-name: fadein;
+        animation-duration: 3s;
+        ul {
+          margin: 0px;
+          list-style: none;
+        }
+      }
+    }
+
+    @include media("<tablet") {
+      &__subtitle {
+        display: none;
+      }
+    }
+  }
+}

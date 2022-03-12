@@ -1,0 +1,26 @@
+.readme {
+  color: $title-color;
+  padding-top: 32px;
+  &__title {
+    @include title_definition;
+    font-size: calc(10vmin);
+    padding: 0px 25vw;
+    text-align: left;
+  }
+  &__text {
+    padding: 0px 25vw;
+    text-align: left;
+  }
+
+  &__skeleton {
+    padding: 0px 25vw;
+  }
+}
+
+@include media('<tablet') {
+  .readme {
+    &__title, &__text, &__skeleton {
+      padding: 0px 12vw;
+    }
+  }
+}

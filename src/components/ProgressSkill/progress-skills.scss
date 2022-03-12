@@ -1,0 +1,48 @@
+@mixin skillstep {
+  background-color: #ccc;
+  flex: 1;
+  border: 1px solid #ededed;
+  height: 50%;
+  align-self: flex-end;  
+
+}
+
+@include media ("<tablet") {
+  .progress-skills {
+    display: block;
+    margin-top: 24px;
+
+    &__title {
+      padding: 0px 12vw;
+      font-size: calc(5vmin);
+      text-align: left;
+      color: $title-color;
+    }
+
+    &__steps {
+      display: flex;
+      height: 25px;
+      margin: 6px 12vw;
+    }
+
+    &__levels {
+      display: flex;
+      height: 25px;
+      margin: 6px 12vw;
+      flex-wrap: nowrap;
+    }
+
+    &__level {
+      flex: 1 1 33%;
+      align-self: flex-start;  
+    }
+    &__step {
+      @include skillstep;
+
+      &--paint {
+        @include skillstep;
+        background-color: $title-color;
+      }
+    }
+  }
+}

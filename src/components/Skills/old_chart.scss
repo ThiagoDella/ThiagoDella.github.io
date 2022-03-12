@@ -1,0 +1,120 @@
+// .radar {
+//   position: relative;
+//   &__title {
+//     @include title_definition;
+//     font-size: calc(7vmin);
+//     text-align: center;
+//     color: $title-color;
+//   }
+//   &__fixer {
+//     float: left;
+//     position: relative;
+//     left: -50%;
+//     width: 100%;
+//     height: 100%;
+//   }
+//   &__chart {
+//     width: 25%;
+//     height: 500px;
+//     float: left;
+//     clear: both;
+//     position: relative;
+//     shape-outside: circle();
+//     left: 50%;
+//     canvas {
+//       position: absolute;
+//       left: 50%;
+//       transform: translateX(-50%);
+//     }
+//   }
+
+//   &__text--right {
+//     position: relative;
+//     left: 50%;
+//     transform: translateX(-25%);
+//     width: 50%;
+//     padding-top: 50px;
+//   }
+//   &__text--left {
+//     position: relative;
+//     left: 50%;
+//     transform: translateX(-25%);
+//     width: 50%;
+//     padding-top: 50px;
+//     text-align: left;
+//   }
+// }
+
+.radar {
+  position: relative;
+  &__title {
+    @include title_definition;
+    font-size: calc(7vmin);
+    text-align: center;
+    color: $title-color;
+    margin: 60px 0px;
+  }
+  width: 1425px;
+  margin: 0 auto;
+
+  &__chart {
+    width: 35%;
+
+    position: absolute;
+    left: 50%;
+    margin-top: -70px;
+    transform: translateX(-50%);
+  }
+
+  .space {
+    width: 350px;
+    height: 315px;
+    // margin-top: -100px;
+    /*Set the width to half of the image and set the 
+  height to the image height plus a little room 
+  for the caption. */
+    float: right;
+    padding: 5px;
+    shape-outside: circle();
+  }
+
+  .pullout {
+    width: 520px;
+    height: 315px;
+    
+
+    /*Set the width and height of the span 
+  to the image size. */
+    float: left;
+    padding: 5px;
+    /*Float the span left and give it the 
+  same amount of padding as CCspace. */
+    margin-left: -180px;
+    /*Move the image into the first column by negative 
+  margin. The number is half the width of the  
+  image (175px) plus the gutter (10px). */
+
+    shape-outside: circle();
+  }
+
+  &__text--right {
+    float: left;
+    padding: 0 5px;
+    width: 700px;
+    p {
+      padding: 0.625em 0;
+      text-align: left;
+      line-height: 20px;
+    }
+  }
+  &__text--left {
+    float: left;
+    padding: 0 5px;
+    width: 700px;
+    p {
+      padding: 0.625em 0;
+      text-align: right;
+      line-height: 20px;
+    }
+  }
+}

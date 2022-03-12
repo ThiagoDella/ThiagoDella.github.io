@@ -1,0 +1,52 @@
+.education {
+  flex: 1 1 calc(50% - 80px);
+  margin: 35px;
+  &__title {
+    @include title_definition;
+    font-size: calc(10vmin);
+    text-align: left;
+    color: $title-color;
+  }
+
+  .degrees {
+    .degree {
+      &__title,
+      &__description {
+        text-align: left;
+        width: 100%;
+      }
+      &__title {
+        font-size: calc(2.8vmin);
+        color: $title-color;
+        &::after {
+          content: " ";
+          background-color: $title-color;
+          height: 4px;
+          display: block;
+          margin-top: 6px;
+        }
+      }
+      &__description {
+        color: $title-color;
+        margin-top: 12px;
+        margin-bottom: 24px;
+        white-space: pre-line;
+        .degree__paper {
+          margin-left: 6px;
+        }
+      }
+    }
+  }
+}
+
+@include media("<tablet") {
+  .education {
+    .degrees {
+      .degree {
+        &__title {
+          font-size: calc(5vmin);
+        }
+      }
+    }
+  }
+}

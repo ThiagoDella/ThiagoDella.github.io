@@ -1,0 +1,72 @@
+@include media(">=tablet") {
+  .progress-skills {
+    display: none;
+  }
+}
+
+.radar {
+  position: relative;
+  margin-top: 100px;
+  &__title {
+    @include title_definition;
+    padding: 0px 25vw;
+    font-size: calc(10vmin);
+    text-align: left;
+    color: $title-color;
+  }
+  &__text {
+    padding: 0px 25vw;
+    text-align: left;
+    color: $title-color;
+  }
+
+  &__chart {
+    width: 35%;
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__skeleton {
+    padding: 0px 25vw;
+  }
+}
+
+@include media(">=tablet", "<=desktop") {
+  .radar {
+    &__chart {
+      width: 60%;
+    }
+  }
+  .radar--height {
+    height: 850px;
+  }
+}
+
+@include media(">desktop", "<=1400px") {
+  .radar {
+    &__chart {
+      width: 50%;
+    }
+  }
+}
+
+
+@include media(">=desktop") {
+  .radar--height {
+    height: 850px;
+  }
+}
+
+@include media('<tablet') {
+  .radar {
+    &__chart {
+      display: none;
+    }
+
+    &__title, &__text, &__skeleton {
+      padding: 0px 12vw;
+    }
+  }
+}
