@@ -1,0 +1,26 @@
+.folder__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.folder__container > .folder__icon > img {
+  height: 100px;
+}
+
+.folder__container > .folder__title {
+  font-size: var(--size-3);
+}
+
+@media (max-width: 1320px) {
+  .folder__container > .folder__icon > img {
+    height: 70px;
+  }
+}
+
+@media (max-width: 900px) {
+  .folder__container > .folder__icon > img {
+    height: 50px;
+  }
+}

@@ -1,0 +1,85 @@
+@font-face {
+  font-family: "VT323";
+  font-weight: 400;
+  src: url("./assets/fonts/vt323-regular.woff2") format("woff2"),
+    url("./assets/fonts/vt323-regular.woff") format("woff");
+}
+
+:root {
+  --white: #d9d9d9;
+  --window-border: rgba(236, 234, 234, 0.1);
+  --black: #000;
+  --background-color: var(--white);
+  --text-color: #333;
+  --accent-color: #aaa;
+  --accent-hover-color: #999;
+  --window-toolbar: #272727;
+  --window-close-btn: red;
+
+  --text__wrapper--inverted: var(--white);
+  --text--inverted: var(--background-color);
+
+  /* PADDINGS & MARGINS */
+  --padding-1: 6px;
+  --padding-2: 12px;
+  --padding-3: 18px;
+  --padding-4: 24px;
+
+  --margin-1: var(--padding-1);
+  --margin-2: var(--padding-2);
+  --margin-3: var(--padding-3);
+  --margin-4: var(--padding-4);
+
+  /* FONT SIZES */
+  --size-05: 0.6rem;
+  --size-1: 1.2rem;
+  --size-2: 1.4rem;
+  --size-3: 1.6rem;
+
+  font-family: "VT323", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.2;
+
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --black: #000;
+    --white: #d9d9d9;
+    --background-color: #333;
+    --text-color: #00ff00;
+    --accent-color: #33ff33;
+    --accent-hover-color: #00cc00;
+    --window-toolbar: #272727;
+    --window-terminal-body: var(--black);
+    --window-doc-body: var(--white);
+
+    --text__wrapper--inverted: var(--white);
+    --text--inverted: var(--background-color);
+  }
+}
