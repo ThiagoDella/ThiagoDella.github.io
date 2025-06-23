@@ -135,9 +135,92 @@
   border-radius: 0px 0px 25px 25px;
 }
 
+.window__body--page {
+  box-sizing: border-box;
+  background-color: var(--window-doc-body);
+  height: calc(100% - 51px);
+  border-radius: 0px 0px 25px 25px;
+  padding: var(--padding-2);
+  color: var(--black);
+  overflow-y: auto;
+}
+
+.window__body--page > .window__body__text__block > .window__body__header {
+  font-size: var(--size-4);
+}
+
+.window__body--page
+  > .window__body__project-section
+  > .window__body__text__block
+  > .window__body__section-stack {
+  font-size: var(--size-3);
+}
+
+.window__body--page
+  > .window__body__project-section
+  > .window__body__text__block
+  > .window__body__section-title {
+  font-size: var(--size-3);
+  border: dashed 3px;
+  border-radius: 10px;
+  width: fit-content;
+  padding: var(--padding-2);
+}
+
+.window__body--page > .window__body__project-section > .window__body__image {
+  border-radius: 15px;
+  max-width: 80%;
+}
+
+.window__body--page
+  > .window__body__project-section
+  > .window__images__display
+  > .window__body__image {
+  border-radius: 15px;
+  height: 600px;
+  margin-right: var(--margin-2);
+}
+
+.window__body--page
+  > .window__body__project-section
+  > .window__images__display--full
+  > .window__body__image {
+  border-radius: 15px;
+  width: 45%;
+  padding: var(--margin-2);
+}
+
+.window__body--page > .window__body__contact__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.window__body__contact__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--margin-2);
+}
+
+.window__body--page > .window__body__text__block--contact {
+  display: flex;
+}
+
+.window__body__contact__image {
+  max-width: 250px;
+  max-height: 250px;
+  margin: 0px var(--margin-2);
+}
+
 .text__wrapper--inverted {
   padding: 0px var(--padding-1) 0px var(--padding-1);
   background-color: var(--text__wrapper--inverted);
+}
+
+.window__body__text__block
+  > .window__body__section-text
+  > .window__body__contact__footer
+  > .window__body__contact__footer__text {
+  font-size: var(--size-1);
 }
 
 .text--inverted {

@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect, useState, type ReactElement } from 'react';
 import AsciiArt from './AsciiArt.txt?raw';
 
 export const AsciiText = (): ReactElement => {

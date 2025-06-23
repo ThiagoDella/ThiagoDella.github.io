@@ -1,6 +1,5 @@
 import type { ReactElement } from "react";
 import { Window } from "./Window";
-import { useVisibilityContext } from "../../hooks/VisibilityProvider";
 
 export const DocWindow = (): ReactElement => {
 

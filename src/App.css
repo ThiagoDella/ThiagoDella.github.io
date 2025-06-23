@@ -25,6 +25,18 @@
   z-index: 1;
 }
 
+.window--contact {
+  grid-row: 1/4;
+  grid-column: 4 / 8;
+  z-index: 1;
+}
+
+.window--portfolio {
+  grid-row: 1/7;
+  grid-column: 1 / 4;
+  z-index: 1;
+}
+
 .window--prizes {
   grid-row: 4/7;
   grid-column: 1 / 3;
@@ -77,6 +89,19 @@
     grid-row: 3 / 7;
     z-index: 1;
   }
+
+  .window--portfolio {
+    grid-column: 1 / 7;
+    grid-row: 3 / 7;
+    z-index: 1;
+  }
+
+  .window--contact {
+    grid-column: 3 / 8;
+    grid-row: 1 / 5;
+    z-index: 1;
+  }
+
   .window--prizes {
     grid-column: 1 / 3;
     grid-row: 4 / 7;
@@ -84,7 +109,7 @@
   }
 
   .folders {
-    grid-column: 6 / 8;
+    grid-column: 5 / 8;
     grid-row: 6 / 7;
   }
 
@@ -130,6 +155,9 @@
     grid-row: 1 / 3;
   }
   .window--cv,
+  .window--prizes,
+  .window--portfolio,
+  .window--contact,
   .window--prizes {
     grid-column: 1 / -1;
     grid-row: 1 / 4;

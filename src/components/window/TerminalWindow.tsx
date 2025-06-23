@@ -34,7 +34,13 @@ export const TerminalWindow = (): ReactElement => {
         <div className="window__body__command">
           <span className="window__body__text">
             <br />
-            With 8+ years of experience building software people would like to use. May it be a distributed heavy load data processing pipeline for 16 Billion products yearly, to a dynamic & simple to use web app.
+            With 8+ years of experience building software that people genuinely enjoy using — from distributed, high-throughput data processing systems handling over 16 billion product records per year, to dynamic, intuitive web and mobile applications. I specialize in TypeScript, Node.js, React, and Python, and have production-grade experience with both SQL (PostgreSQL, MySQL) and NoSQL (MongoDB, DynamoDB, Redis) databases.
+            <br />
+            <br />
+            I'm familiar with designing scalable backend systems, event-driven microservices, and serverless architectures using the AWS ecosystem (Lambda, S3, API Gateway, SQS, CloudWatch, etc.). I build with a focus on clean architecture, TDD, and domain-driven design, and I enjoy tackling complex engineering challenges — from real-time data flows to user-friendly frontends.
+            <br />
+            <br />
+            I care about code that’s readable, maintainable, and tested — and about building products that deliver real value.
           </span>
         </div>
       </>

@@ -1,7 +1,9 @@
 import './App.css'
 import { Folder } from './components/folder/Folder'
+import { ContactWindow } from './components/window/ContactWindow'
 import { DocWindow } from './components/window/DocWindow'
 import { ImageWindow } from './components/window/ImageWindow'
+import { PortfolioWindow } from './components/window/PortfolioWindow'
 import { PrizesWindow } from './components/window/PrizesWindow'
 import { TerminalWindow } from './components/window/TerminalWindow'
 import { VisibilityProvider } from './hooks/VisibilityProvider'
@@ -14,22 +16,24 @@ function App() {
         <TerminalWindow />
         <DocWindow />
         <PrizesWindow />
+        <PortfolioWindow />
+        <ContactWindow />
         <ImageWindow
           source="./images/mask.jpeg"
-          alt="Going to Venice, you need to be prepared!"
+          alt="Me with a diving mask on a train!"
           title="always_prepared.jpg"
           _className='image-1'
         />
         <ImageWindow
-          source="./images/greece.jpeg"
-          alt="An image of me visiting some relatives in Greece"
-          title="greece_family.jpg"
+          source="./images/frankfurt.png"
+          alt="A picture from where I live!"
+          title="i_live_in_frankfurt.jpg"
           _className='image-2'
         />
         <ImageWindow
-          source="./images/snow.jpeg"
-          alt="Neuschwanstein Castle, what is that?!"
-          title="what_is_that.jpg"
+          source="./images/rio de janeiro.png"
+          alt="A picture from the place I'm from"
+          title="im_from_rio.jpg"
           _className='image-3'
         />
         <div className="folders">
@@ -42,10 +46,6 @@ function App() {
             <Folder title="photo-2" type="png" _className="image-2" />
             <Folder title="photo-3" type="png" _className="image-3" />
           </div>
-          {/* <div className="folders--desktop">
-            <Folder title="projects" type="html" />
-            <Folder title="contact" type="html" />
-          </div> */}
 
         </div>
       </main>
