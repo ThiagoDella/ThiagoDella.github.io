@@ -25,16 +25,18 @@ const visibility = {
 interface IVisibilityCtx {
   visibilityState: typeof visibility;
   setVisibilityState: (_state: typeof visibility) => void;
+  latestClick: string | null;
+  setLatestClick: (_state: string) => void;
 }
 
 const VisibilityContext = createContext<IVisibilityCtx | null>(null);
 
 export const VisibilityProvider = ({ children }: { children: ReactNode }): ReactNode => {
   const [visibilityState, setVisibilityState] = useState(visibility);
-  console.log(visibilityState);
+  const [latestClick, setLatestClick] = useState<null | string>(null);
 
   return (
-    <VisibilityContext.Provider value={{ visibilityState, setVisibilityState }}>
+    <VisibilityContext.Provider value={{ visibilityState, setVisibilityState, latestClick, setLatestClick }}>
       {children}
     </VisibilityContext.Provider>
   )

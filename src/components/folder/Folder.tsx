@@ -4,10 +4,11 @@ import './folder.css';
 import { useVisibilityContext, type IVisibility } from "../../hooks/VisibilityProvider";
 
 export const Folder = ({ title, type = "html", _className }: { title: string; type: string; _className: keyof IVisibility }): ReactElement => {
-  const { visibilityState, setVisibilityState } = useVisibilityContext();
+  const { visibilityState, setVisibilityState, setLatestClick } = useVisibilityContext();
   const _title = `${title}.${type}`;
 
   const changeVisibility = () => {
+    setLatestClick(_className);
     setVisibilityState({
       ...visibilityState,
       [_className]: true,
